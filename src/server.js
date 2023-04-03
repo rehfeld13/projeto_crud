@@ -6,7 +6,6 @@ const routes = require('./routes')
 
 const app = express()
 
-
 //conexão com  o banco de dados
 db.connect()
 

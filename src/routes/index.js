@@ -2,6 +2,7 @@ const router = require('express').Router()
 
 const CustomersController = require('../controllers/customers')
 
+
 router.get('/',(req, res)=>{
   res.render('index',{
     title: 'Título teste'
