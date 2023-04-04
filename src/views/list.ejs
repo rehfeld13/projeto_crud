@@ -8,7 +8,12 @@
   
   <%- include('partials/header.ejs') %>
   
+  <% if(typeof editado !== 'undefined'){ %>
+    <span class="message">Cliente editado com sucesso!</span>
+  <% } %>
+  
   <h1> <%= title %> </h1>
+
 
   <ul class="list-clients">
   <% clients.forEach((elemento)=>{ %>
@@ -16,6 +21,7 @@
         <span>Nome: <%= elemento.name %></span>
         <span>Idade: <%= elemento.age %></span>
         <span>Email: <%= elemento.email %></span>
+        <span><a href="/edit?id=<%= elemento._id %>">[Editar]</a></span>
       </li>
   <% }) %>
   </ul>
