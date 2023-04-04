@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <%- include('partials/head.ejs') %>
+</head>
+<body>
+  
+  
+  <%- include('partials/header.ejs') %>
+  
+  <h1> <%= title %> </h1>
+
+  <ul class="list-clients">
+  <% clients.forEach((elemento)=>{ %>
+      <li class="clients">
+        <span>Nome: <%= elemento.name %></span>
+        <span>Idade: <%= elemento.age %></span>
+        <span>Email: <%= elemento.email %></span>
+      </li>
+  <% }) %>
+  </ul>
+
+  <%- include('partials/foot.ejs') %>
+  
+</body>
+</html>
