@@ -78,11 +78,22 @@ const { crypto } = require('../utils/password')
 
 }
 
+async function remove(req,res){
+  const { id } = req.query
+
+  const remove = await CustomersModel.deleteOne({_id: id})
+  
+  if(remove.acknowledged === true){
+    res.redirect('/list')
+  }
+}
+
 
 module.exports = {
   add,
   index,
   list,
   formEdit,
-  edit
+  edit,
+  remove
 }

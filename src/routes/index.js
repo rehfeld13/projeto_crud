@@ -17,4 +17,8 @@ router.get('/list', CustomersController.list)
 router.get('/edit', CustomersController.formEdit)
 router.post('/edit/:id', CustomersController.edit)
 
+
+//rota para apagar clientes
+router.get('/remove', CustomersController.remove)
+
 module.exports = router

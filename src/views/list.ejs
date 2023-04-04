@@ -13,7 +13,10 @@
   <% } %>
   
   <h1> <%= title %> </h1>
-
+  
+  <% if (clients.length === 0) { %>
+    <span class="no-client">Nenhum cliente cadastrado.</span>
+  <% } %>
 
   <ul class="list-clients">
   <% clients.forEach((elemento)=>{ %>
@@ -22,8 +25,10 @@
         <span>Idade: <%= elemento.age %></span>
         <span>Email: <%= elemento.email %></span>
         <span><a href="/edit?id=<%= elemento._id %>">[Editar]</a></span>
+        <span><a href="/remove?id=<%= elemento._id %>">[Apagar]</a></span>
       </li>
   <% }) %>
+
   </ul>
 
   <%- include('partials/foot.ejs') %>

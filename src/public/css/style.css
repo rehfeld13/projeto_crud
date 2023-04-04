@@ -114,19 +114,29 @@ form button:hover{
   gap: 10px;
 }
 
-.list-clients .clients span:last-child{
+.list-clients .clients span:nth-child(4){
   background-color: rgb(20, 88, 35);
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
+}
+.list-clients .clients span:last-child{
+  background-color: rgb(250, 9, 9);
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .list-clients .clients span a{
-  color: greenyellow;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
 }
 
 .message{
   color: chartreuse;
   font-weight: bold;
   font-size: 13px;
+}
 
+.no-client{
+  margin-top: 10px;
+  color: white;
 }
